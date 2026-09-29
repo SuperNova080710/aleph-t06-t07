@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function HomePage() {
   return (
     <div className="space-y-8">
@@ -26,12 +28,12 @@ export default function HomePage() {
               다음 계획을 개선하세요.
             </p>
             <div className="mt-6 flex flex-wrap gap-3">
-              <a href="/plans" className="btn-primary">
+              <Link href="/plans" className="btn-primary">
                 계획 시작하기
-              </a>
-              <a href="/review" className="btn-secondary px-4 py-2.5 text-sm">
+              </Link>
+              <Link href="/review" className="btn-secondary px-4 py-2.5 text-sm">
                 돌아보기
-              </a>
+              </Link>
             </div>
           </div>
 

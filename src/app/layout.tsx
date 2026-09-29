@@ -4,6 +4,7 @@ import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
 import { ThemeToggle } from "@/components/theme-toggle";
 import { AuthNav } from "@/components/auth-nav";
+import Link from "next/link";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -38,7 +39,7 @@ export default function RootLayout({
           <div className="min-h-screen">
             <header className="sticky top-0 z-20 border-b border-slate-200/70 bg-white/80 backdrop-blur dark:border-slate-800 dark:bg-slate-950/80">
               <div className="mx-auto flex max-w-5xl items-center justify-between gap-3 px-4 py-4">
-                <a href="/" className="flex items-center gap-2">
+                <Link href="/" className="flex items-center gap-2">
                   <span className="inline-flex h-9 w-9 items-center justify-center rounded-xl bg-slate-900 text-sm font-bold text-white dark:bg-white dark:text-slate-900">
                     P
                   </span>
@@ -48,18 +49,18 @@ export default function RootLayout({
                       Plan → Do → See
                     </p>
                   </div>
-                </a>
+                </Link>
 
                 <div className="flex items-center gap-2">
                   <nav className="flex items-center gap-1 rounded-full border border-slate-200 bg-slate-50 p-1 dark:border-slate-700 dark:bg-slate-900">
                     {nav.map((item) => (
-                      <a
+                      <Link
                         key={item.href}
                         href={item.href}
                         className="rounded-full px-3 py-1.5 text-sm text-slate-600 transition hover:bg-white hover:text-slate-900 hover:shadow-sm dark:text-slate-300 dark:hover:bg-slate-800 dark:hover:text-white"
                       >
                         {item.label}
-                      </a>
+                      </Link>
                     ))}
                   </nav>
                   <AuthNav />

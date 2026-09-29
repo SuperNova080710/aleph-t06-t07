@@ -28,7 +28,7 @@ export async function createPlan(formData: FormData) {
         
     const user = await requireUser();
 
-    const plan = await prisma.plan.create({
+    await prisma.plan.create({
         data: {
             userId: user.id,
             title,
