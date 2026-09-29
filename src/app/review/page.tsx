@@ -18,7 +18,7 @@ function startOfTodaySeoul() {
 }
 
 export default async function ReviewPage({ searchParams }: Props) {
-    const user = await requireUser();
+    const user = await requireUser({ redirectToLogin: true });
 
     const sp = await searchParams;
     const focus = sp.focus || "all";

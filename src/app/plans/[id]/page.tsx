@@ -29,7 +29,7 @@ export default async function PlanDetailPage({ params, searchParams }: Props) {
     const statusFilter = sp.status || "ALL";
     const sort = sp.sort || "priority";
 
-    const user = await requireUser();
+    const user = await requireUser({ redirectToLogin: true });
 
     const plan = await prisma.plan.findFirst({
         where: {
