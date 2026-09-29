@@ -1,7 +1,5 @@
-import { headers } from "next/headers";
 import { prisma } from "@/lib/prisma";
 import { PlanSidebar } from "@/components/plan-sidebar";
-import { auth } from "@/lib/auth";
 import { cache } from "react";
 import { requireUser } from "@/lib/require-user";
 
@@ -32,15 +30,9 @@ export default async function PlansLayout({
 }: {
   children: React.ReactNode;
 }) {
-  const session = await auth.api.getSession({
-    headers: await headers(),
-  });
 
-  if (!session) {
-    throw new Error("Unauthorized");
-  }
+  const user = await requireUser({ redirectToLogin: true });
 
-  const user = await requireUser();
   const plans = await getPlansForSidebar(user.id);
 
   return (
