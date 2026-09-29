@@ -11,6 +11,7 @@ import {
 } from "../actions";
 import { PlanDetailShell } from "@/components/plan-detail-shell";
 import { requireUser } from "@/lib/require-user";
+import Link from "next/link";
 
 type Props = {
     params: Promise<{ id: string }>;
@@ -111,12 +112,12 @@ export default async function PlanDetailPage({ params, searchParams }: Props) {
     return (
         <PlanDetailShell planId={plan.id} title={plan.title}>
             <div>
-                <a
+                <Link
                     href="/plans"
                     className="text-sm text-slate-500 hover:text-slate-800 dark:text-slate-400 dark:hover:text-slate-200"
                 >
                     ← 계획 목록
-                </a>
+                </Link>
 
                 {plan.description && (
                     <p className="mt-2 text-slate-600 dark:text-slate-300">{plan.description}</p>
