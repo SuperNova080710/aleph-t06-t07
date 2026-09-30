@@ -3,14 +3,14 @@ import Link from "next/link";
 export default function HomePage() {
   return (
     <div className="space-y-8">
-      <div className="rounded-2xl border border-amber-200 bg-amber-50 px-5 py-4 text-amber-950 shadow-sm dark:border-amber-900/50 dark:bg-amber-950/40 dark:text-amber-100">
+      {/* <div className="rounded-2xl border border-amber-200 bg-amber-50 px-5 py-4 text-amber-950 shadow-sm dark:border-amber-900/50 dark:bg-amber-950/40 dark:text-amber-100">
         <p className="font-semibold">
           지금은 로그인이 없어 링크을 아는 사람은 누구나 볼 수 있습니다.
         </p>
         <p className="mt-1 text-sm opacity-80">
           남이 봐도 괜찮은 내용만 넣으세요. 민감한 정보나 다른 사람 정보는 적지 마세요.
         </p>
-      </div>
+      </div> */}
 
       <section className="card overflow-hidden">
         <div className="grid gap-6 p-6 sm:p-8 lg:grid-cols-[1.2fr_0.8fr] lg:items-center">
