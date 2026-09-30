@@ -72,7 +72,7 @@ export default function RootLayout({
             <main className="mx-auto max-w-5xl px-4 py-8 sm:py-10">{children}</main>
 
             <footer className="border-t border-slate-200/70 py-8 text-center text-xs text-slate-500 dark:border-slate-800 dark:text-slate-400">
-              로그인 없이 동작하는 공개 다이어리 · 민감 정보는 넣지 마세요
+              로그인으로 동작하는 비밀 다이어리 · 민감 정보는 넣지 마세요
             </footer>
           </div>
         </ThemeProvider>
